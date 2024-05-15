@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My first dynamic Website</title>
+    <link rel="icon" type="image/png" href="{{ fav }}">
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+   <!-- <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css"> --> 
+</head>
+
+<body>
+    <div style="background-color: #333; overflow: hidden;">
+        <a href="{{ url_for('hello') }}"style="color: white; text-align: center; padding: 14px 20px; text-decoration: none;">Home</a>
+        <a href="{{ url_for('titanic') }}" style="color: white; text-align: center; padding: 14px 20px; text-decoration: none;">Titanic</a>
+        <a href="https://github.com/kelvirc" style="color: white; text-align: center; padding: 14px 20px; text-decoration: none;">About</a>
+    </div>
+
+    <main>
+        <h1>I have been seen {{ count }} times.</h1>
+        <a href="https://www.hwr-berlin.de/en/"> HWR Berlin Homepage</a>
+        <img src="{{ imag }}" alt="Example Image">
+        <ul>
+            {% for i in range(1, count+1) %}
+            <li>{{ i }}: Hello {{ name }}! </li>
+            {% endfor %}
+        </ul>
+    </main>
+    <footer>
+        <p> Kerim J. Elvir</p>
+    </footer>
+
+</body>
+
+</html>

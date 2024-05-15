@@ -1,0 +1,5 @@
+Flask
+Redis
+python-dotenv
+pandas
+matplotlib
